@@ -40,7 +40,7 @@ public class LocalFilesystemURL {
         if (!FILESYSTEM_PROTOCOL.equals(uri.getScheme())) {
             return null;
         }
-        String path = uri.getPath();
+        String path = uri.getEncodedPath();
         if (path.length() < 1) {
             return null;
         }

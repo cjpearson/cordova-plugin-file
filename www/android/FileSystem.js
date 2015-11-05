@@ -23,7 +23,7 @@ FILESYSTEM_PROTOCOL = "cdvfile";
 
 module.exports = {
     __format__: function(fullPath, nativeUrl) {
-        var path = '/' + this.name + '/' + encodeURI(fullPath);
+        var path = '/' + this.name + '/' + fullPath;
         path = path.replace('//','/');
         var ret = FILESYSTEM_PROTOCOL + '://localhost' + path;
         var m = /\?.*/.exec(nativeUrl);
